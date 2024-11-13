@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>net.redeclipse.RedEclipse</id>
+  <id>net.redeclipse.RedEclipse-Legacy</id>
   <metadata_license>CC-BY-SA-3.0+</metadata_license>
   <project_license>Zlib and CC-BY-SA-3.0+</project_license>
   <provides>
     <id>redeclipse.desktop</id>
   </provides>
-  <launchable type="desktop-id">net.redeclipse.RedEclipse.desktop</launchable>
-  <name>Red Eclipse</name>
+  <launchable type="desktop-id">net.redeclipse.RedEclipse-Legacy.desktop</launchable>
+  <name>Red Eclipse Legacy</name>
   <summary>First-person shooter with agile gameplay and built-in editor</summary>
   <description>
     <p>
       Red Eclipse is a fun-filled new take on the first person arena shooter,
       built as a total conversion of Cube Engine 2, which lends itself toward
       a balanced gameplay, with a general theme of agility in a variety of
-      environments.
+      environments. This is version 1.6.0 of the game, the last version before
+      its development went to a different direction in terms of graphics,
+      gameplay mechanics and other aspects.
     </p>
     <ul>
       <li>Cross-platform multiplayer</li>
@@ -69,7 +71,6 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
-    <release version="2.0.0" date="2019-12-19"/>
     <release version="1.6.0" date="2017-12-21"/>
   </releases>
   <url type="bugtracker">https://github.com/redeclipse/base/issues</url>
