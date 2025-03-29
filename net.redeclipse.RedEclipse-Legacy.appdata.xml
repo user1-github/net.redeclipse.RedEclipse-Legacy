@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
   <id>net.redeclipse.RedEclipse-Legacy</id>
+  <launchable type="desktop-id">net.redeclipse.RedEclipse-Legacy.desktop</launchable>
   <metadata_license>CC-BY-SA-3.0+</metadata_license>
   <project_license>Zlib and CC-BY-SA-3.0+</project_license>
-  <provides>
-    <id>redeclipse.desktop</id>
-  </provides>
-  <launchable type="desktop-id">net.redeclipse.RedEclipse-Legacy.desktop</launchable>
   <name>Red Eclipse Legacy</name>
+  <developer_name>Red Eclipse Team</developer_name>
   <summary>First-person shooter with agile gameplay and built-in editor</summary>
   <description>
     <p>
@@ -26,6 +24,9 @@
     </ul>
   </description>
   <url type="homepage">https://redeclipse.net/</url>
+  <url type="bugtracker">https://github.com/redeclipse/base/issues</url>
+  <url type="donation">https://redeclipse.net/donate</url>
+  <url type="help">https://redeclipse.net/faq</url>
   <screenshots>
     <screenshot type="default">
       <image>https://redeclipse.net/bits/images/053.jpg</image>
@@ -40,7 +41,7 @@
       <caption>Overlooking friendly fire on the map cutec</caption>
     </screenshot>
   </screenshots>
-  <developer_name>Red Eclipse Team</developer_name>
+  <update_contact>https://redeclipse.net/forum/</update_contact>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-fantasy">moderate</content_attribute>
     <content_attribute id="violence-bloodshed">mild</content_attribute>
@@ -49,7 +50,4 @@
   <releases>
     <release version="1.6.0" date="2017-12-21"/>
   </releases>
-  <url type="bugtracker">https://github.com/redeclipse/base/issues</url>
-  <url type="donation">https://redeclipse.net/donate</url>
-  <url type="help">https://redeclipse.net/faq</url>
 </component>
