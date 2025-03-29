@@ -10,7 +10,6 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
-        /* Red Eclipse does not respect XDG base directories */
         "--persist=.redeclipse"
     ],
     "command": "redeclipse",
