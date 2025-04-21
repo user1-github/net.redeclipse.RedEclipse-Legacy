@@ -1,27 +1,17 @@
-{
-    "app-id": "net.redeclipse.RedEclipse-Legacy",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
-    "sdk": "org.freedesktop.Sdk",
-    "finish-args": [
-        "--device=dri",
-        "--share=ipc",
-        "--share=network",
-        "--socket=fallback-x11",
-        "--socket=wayland",
-        "--socket=pulseaudio",
-        "--persist=.redeclipse"
-    ],
-    "command": "redeclipse",
-    "cleanup": [
-        "/include",
-        "/lib/pkgconfig",
-        "/share/aclocal",
-        "/share/man",
-        "*.la",
-        "*.a"
-    ],
-    "modules": [
+id: net.redeclipse.RedEclipse-Legacy
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+command: redeclipse   
+finish-args:
+  - --device=dri
+  - --share=ipc
+  - --share=network
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --persist=.redeclipse
+  modules:
         {
             "name": "redeclipse",
             "buildsystem": "cmake-ninja",
