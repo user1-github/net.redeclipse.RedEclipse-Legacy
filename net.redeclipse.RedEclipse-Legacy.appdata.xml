@@ -23,25 +23,24 @@
       <li>Builtin editor lets you create your own maps cooperatively online</li>
     </ul>
   </description>
-  <url type="homepage">https://redeclipse.net/</url>
+  <url type="homepage">https://www.redeclipse.net/</url>
   <url type="bugtracker">https://github.com/redeclipse/base/issues</url>
-  <url type="donation">https://redeclipse.net/donate</url>
-  <url type="help">https://redeclipse.net/faq</url>
+  <url type="donation">https://www.redeclipse.net/donate</url>
+  <url type="help">https://www.redeclipse.net/faq</url>
   <screenshots>
     <screenshot type="default">
-      <image>https://redeclipse.net/bits/images/053.jpg</image>
+      <image>https://www.redeclipse.net/bits/images/053.jpg</image>
       <caption>Posing with fire on the map venus</caption>
     </screenshot>
     <screenshot>
-      <image>https://redeclipse.net/bits/images/045.jpg</image>
+      <image>https://www.redeclipse.net/bits/images/045.jpg</image>
       <caption>Mine fireworks on the map vault</caption>
     </screenshot>
     <screenshot>
-      <image>https://redeclipse.net/bits/images/019.jpg</image>
+      <image>https://www.redeclipse.net/bits/images/019.jpg</image>
       <caption>Overlooking friendly fire on the map cutec</caption>
     </screenshot>
   </screenshots>
-  <update_contact>https://redeclipse.net/forum/</update_contact>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-fantasy">moderate</content_attribute>
     <content_attribute id="violence-bloodshed">mild</content_attribute>
