@@ -31,6 +31,10 @@ modules:
         path: redeclipse.sh
       - type: patch
         path: use-system-sqlite.patch
+      - type: shell
+        dest: src
+        commands:
+          - rm -r /support
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
