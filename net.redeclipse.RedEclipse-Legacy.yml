@@ -29,6 +29,8 @@ modules:
         path: net.redeclipse.RedEclipse-Legacy.appdata.xml
       - type: file
         path: redeclipse.sh
+      - type: patch
+        path: use-system-sqlite.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
