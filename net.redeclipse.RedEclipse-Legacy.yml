@@ -23,14 +23,12 @@ modules:
         sha256: 48a947e858587116b7d177cf18148d0d9e40b1c5b481e2c955baed68cffc2849
       - type: file
         url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse.desktop.am
-        sha256: 8060b6cfb23ebb191da0b3aa8267b156f0a3812ed7fea9266efecacbc9c962fe
+        sha256: 2e64ca5369f114f3074cfcbbe357c41ff01bdc41b59ee8784513b9887611c14d
         dest-filename: redeclipse.desktop
       - type: file
         path: net.redeclipse.RedEclipse-Legacy.appdata.xml
       - type: file
         path: redeclipse.sh
-      - type: patch
-        path: use-system-sqlite.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
