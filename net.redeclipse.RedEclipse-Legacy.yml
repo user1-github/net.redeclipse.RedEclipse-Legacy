@@ -24,7 +24,6 @@ modules:
 
   - name: redeclipse
     buildsystem: cmake-ninja
-    no-make-install: true
     subdir: src
     sources:
       - type: archive
