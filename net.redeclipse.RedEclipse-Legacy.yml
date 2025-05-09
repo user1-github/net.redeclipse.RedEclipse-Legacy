@@ -13,17 +13,9 @@ finish-args:
   - --persist=.redeclipse
 modules:
 
-  - name: enet
-    sources:
-      - type: archive
-        url: https://github.com/lsalzman/enet/archive/refs/tags/v1.3.18.tar.gz
-        sha256: 28603c895f9ed24a846478180ee72c7376b39b4bb1287b73877e5eae7d96b0dd
-      - type: shell
-        commands:
-          - autoreconf -vfi
-
   - name: redeclipse
     buildsystem: cmake-ninja
+    no-make-install: true
     subdir: src
     sources:
       - type: archive
@@ -37,8 +29,6 @@ modules:
         path: net.redeclipse.RedEclipse-Legacy.appdata.xml
       - type: file
         path: redeclipse.sh
-      - type: patch
-        path: redeclipse-1.5.3-build-with-system-enet.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
