@@ -14,7 +14,7 @@ finish-args:
 modules:
 
   - name: redeclipse
-    buildsystem: cmake-ninja
+    no-autogen: true
     no-make-install: true
     subdir: src
     sources:
@@ -24,17 +24,18 @@ modules:
       - type: file
         url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse.desktop.am
         sha256: 2e64ca5369f114f3074cfcbbe357c41ff01bdc41b59ee8784513b9887611c14d
-        dest-filename: redeclipse.desktop
       - type: file
         path: net.redeclipse.RedEclipse-Legacy.appdata.xml
       - type: file
         path: redeclipse.sh
+      - type: patch
+        path: use-system-sqlite.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
       - cp -r ../config /app/share/redeclipse/
       - cp -r ../data /app/share/redeclipse/
       - install -Dm644 ../net.redeclipse.RedEclipse-Legacy.appdata.xml /app/share/appdata/net.redeclipse.RedEclipse-Legacy.appdata.xml
-      - install -Dm644 ../redeclipse.desktop /app/share/applications/net.redeclipse.RedEclipse-Legacy.desktop
+      - install -Dm644 ../redeclipse.desktop.am /app/share/applications/net.redeclipse.RedEclipse-Legacy.desktop
       - install -Dm644 ../src/install/nix/redeclipse_x128.png /app/share/icons/hicolor/128x128/apps/net.redeclipse.RedEclipse-Legacy.png
       - desktop-file-edit --set-name="Red Eclipse Legacy" --set-icon=net.redeclipse.RedEclipse-Legacy --set-key=Exec --set-value=redeclipse /app/share/applications/net.redeclipse.RedEclipse-Legacy.desktop
