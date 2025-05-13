@@ -25,6 +25,10 @@ modules:
   - name: redeclipse
     buildsystem: cmake-ninja
     no-make-install: true
+    make-args:
+      - LIBENET=""
+    make-install-args:
+      - LIBENET=""
     subdir: src
     sources:
       - type: archive
@@ -37,12 +41,11 @@ modules:
         path: net.redeclipse.RedEclipse-Legacy.appdata.xml
       - type: file
         path: redeclipse.sh
-      - type: patch
-        path: redeclipse-1.5.3-build-with-system-enet.patch
       - type: shell
         dest: src
         commands:
           - rm -r enet
+          - mkdir -p enet/include
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
