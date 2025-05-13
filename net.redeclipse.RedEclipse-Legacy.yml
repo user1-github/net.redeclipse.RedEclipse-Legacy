@@ -14,8 +14,6 @@ finish-args:
 modules:
 
   - name: redeclipse
-    buildsystem: cmake-ninja
-    no-make-install: true
     subdir: src
     sources:
       - type: archive
@@ -28,6 +26,12 @@ modules:
         path: net.redeclipse.RedEclipse-Legacy.appdata.xml
       - type: file
         path: redeclipse.sh
+      - type: patch
+        path: use-system-sqlite.patch
+      - type: shell
+        dest: src
+        commands:
+          - rm -r support
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
