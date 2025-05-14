@@ -16,6 +16,11 @@ modules:
   - name: redeclipse
     no-autogen: true
     no-make-install: true
+    build-options:
+      cflags: -O3 -fomit-frame-pointer -ffast-math
+      cflags-override: true
+      cxxflags: -O3 -fomit-frame-pointer -ffast-math
+      cxxflags-override: true
     subdir: src
     sources:
       - type: archive
