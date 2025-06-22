@@ -11,12 +11,34 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --persist=.redeclipse
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/licenses
+  - '*.la'
+  - '*.a'
 modules:
+
+  - name: enet
+    sources:
+      - type: archive
+        url: https://github.com/lsalzman/enet/archive/refs/tags/v1.3.18.tar.gz
+        sha256: 28603c895f9ed24a846478180ee72c7376b39b4bb1287b73877e5eae7d96b0dd
+        x-checker-data:
+          type: anitya
+          project-id: 696
+          stable-only: true
+          url-template: https://github.com/lsalzman/enet/archive/refs/tags/v$version.tar.gz
+      - type: shell
+        commands:
+          - autoreconf -vfi
 
   - name: redeclipse
     no-autogen: true
     no-make-install: true
     build-options:
+      cflags: -O3 -fomit-frame-pointer
+      cflags-override: true
       cxxflags: -O3 -fomit-frame-pointer -ffast-math
       cxxflags-override: true
     subdir: src
