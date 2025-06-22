@@ -17,8 +17,6 @@ modules:
     no-autogen: true
     no-make-install: true
     build-options:
-      cflags: -O3 -fomit-frame-pointer
-      cflags-override: true
       cxxflags: -O3 -fomit-frame-pointer -ffast-math
       cxxflags-override: true
     subdir: src
@@ -34,7 +32,7 @@ modules:
       - type: file
         path: redeclipse.sh
       - type: patch
-        path: use-system-sqlite.patch
+        path: use-system-enet-and-sqlite.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
