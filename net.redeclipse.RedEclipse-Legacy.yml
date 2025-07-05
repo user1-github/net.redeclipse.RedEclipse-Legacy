@@ -11,26 +11,7 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --persist=.redeclipse
-cleanup:
-  - /include
-  - /lib/pkgconfig
-  - '*.la'
-  - '*.a'
 modules:
-
-  - name: enet
-    sources:
-      - type: archive
-        url: https://github.com/lsalzman/enet/archive/refs/tags/v1.3.18.tar.gz
-        sha256: 28603c895f9ed24a846478180ee72c7376b39b4bb1287b73877e5eae7d96b0dd
-        x-checker-data:
-          type: anitya
-          project-id: 696
-          stable-only: true
-          url-template: https://github.com/lsalzman/enet/archive/refs/tags/v$version.tar.gz
-      - type: shell
-        commands:
-          - autoreconf -vfi
 
   - name: redeclipse
     no-autogen: true
@@ -53,7 +34,7 @@ modules:
       - type: file
         path: redeclipse.sh
       - type: patch
-        path: use-system-enet-and-sqlite.patch
+        path: use-system-sqlite.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
