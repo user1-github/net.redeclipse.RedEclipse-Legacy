@@ -11,7 +11,23 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --persist=.redeclipse
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - '*.la'
+  - '*.a'
 modules:
+
+  - name: sdl2_image
+    sources:
+      - type: archive
+        url: https://github.com/libsdl-org/SDL_image/archive/refs/tags/release-2.8.8.tar.gz
+        sha256: 2bd2c17cab3744ebfe7351ded8c70dc2078d8c7c24eb9f4ebb1b26a623e2a747
+        x-checker-data:
+          type: anitya
+          project-id: 382729
+          stable-only: true
+          url-template: https://github.com/libsdl-org/SDL_image/archive/refs/tags/release-$version.tar.gz
 
   - name: redeclipse
     no-autogen: true
