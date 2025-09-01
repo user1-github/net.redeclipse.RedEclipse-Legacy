@@ -21,13 +21,13 @@ modules:
   - name: sdl2_image
     sources:
       - type: archive
-        url: https://github.com/libsdl-org/SDL_image/archive/refs/tags/release-2.8.8.tar.gz
-        sha256: 2bd2c17cab3744ebfe7351ded8c70dc2078d8c7c24eb9f4ebb1b26a623e2a747
+        url: https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.8/SDL2_image-2.8.8.tar.gz
+        sha256: 2213b56fdaff2220d0e38c8e420cbe1a83c87374190cba8c70af2156097ce30a
         x-checker-data:
           type: anitya
           project-id: 382729
           stable-only: true
-          url-template: https://github.com/libsdl-org/SDL_image/archive/refs/tags/release-$version.tar.gz
+          url-template: https://github.com/libsdl-org/SDL_image/releases/download/release-$version/SDL2_image-$version.tar.gz
 
   - name: redeclipse
     no-autogen: true
