@@ -19,7 +19,6 @@ cleanup:
 modules:
 
   - name: sdl2_image
-    rm-configure: true
     sources:
       - type: archive
         url: https://github.com/libsdl-org/SDL_image/releases/download/release-2.8.8/SDL2_image-2.8.8.tar.gz
@@ -38,6 +37,9 @@ modules:
       cflags-override: true
       cxxflags: -O3 -fomit-frame-pointer -ffast-math
       cxxflags-override: true
+      env:
+        C_INCLUDE_PATH: /app/include/SDL2
+        CPLUS_INCLUDE_PATH: /app/include/SDL2
     subdir: src
     sources:
       - type: archive
