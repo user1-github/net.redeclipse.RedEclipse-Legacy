@@ -13,6 +13,7 @@ finish-args:
   - --persist=.redeclipse
 cleanup:
   - /include
+  - /lib/cmake
   - /lib/pkgconfig
   - '*.la'
   - '*.a'
