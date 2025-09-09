@@ -15,8 +15,6 @@ cleanup:
   - /include
   - /lib/cmake
   - /lib/pkgconfig
-  - '*.la'
-  - '*.a'
 modules:
 
   - name: sdl2_image
