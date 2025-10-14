@@ -34,7 +34,7 @@ modules:
         url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse.desktop.am
         sha256: c669a73152f5fdee807fcd31f5a64ef1d78338f4664e36fc7ea14f20374b970e
       - type: file
-        url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x256.png
+        url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x512.png
         sha256: c669a73152f5fdee807fcd31f5a64ef1d78338f4664e36fc7ea14f20374b970e
       - type: file
         path: net.redeclipse.RedEclipse-Legacy.metainfo.xml
@@ -48,5 +48,5 @@ modules:
       - cp -a ../config ../data /app/share/redeclipse
       - install -Dm644 ../net.redeclipse.RedEclipse-Legacy.metainfo.xml /app/share/metainfo/net.redeclipse.RedEclipse-Legacy.metainfo.xml
       - install -Dm644 ../redeclipse.desktop.am /app/share/applications/net.redeclipse.RedEclipse-Legacy.desktop
-      - install -Dm644 ../redeclipse_x256.png /app/share/icons/hicolor/256x256/apps/net.redeclipse.RedEclipse-Legacy.png
+      - install -Dm644 ../redeclipse_x512.png /app/share/icons/hicolor/512x512/apps/net.redeclipse.RedEclipse-Legacy.png
       - desktop-file-edit --set-name="Red Eclipse Legacy" --set-icon=net.redeclipse.RedEclipse-Legacy --set-key=Exec --set-value=redeclipse /app/share/applications/net.redeclipse.RedEclipse-Legacy.desktop
