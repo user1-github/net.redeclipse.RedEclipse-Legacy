@@ -34,8 +34,8 @@ modules:
         url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse.desktop.am
         sha256: c669a73152f5fdee807fcd31f5a64ef1d78338f4664e36fc7ea14f20374b970e
       - type: file
-        url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x512.png
-        sha256: c669a73152f5fdee807fcd31f5a64ef1d78338f4664e36fc7ea14f20374b970e
+        url: https://raw.githubusercontent.com/redeclipse/base/2206654c848a26c3c7f55440e4470cd5c76dc472/src/install/nix/redeclipse_x512.png
+        sha256: 328e552eeb014d31bb6337add6fcc5c24f83e19c49066f578af701d646fcf2ba
       - type: file
         path: net.redeclipse.RedEclipse-Legacy.metainfo.xml
       - type: file
