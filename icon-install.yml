@@ -8,22 +8,22 @@ build-commands:
 sources:
   - type: file
     url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x16.png
-    sha256: 328e552eeb014d31bb6337add6fcc5c24f83e19c49066f578af701d646fcf2ba
+    sha256: 21aa62c3f18183fe2d0380589230d399f6964cb2cd6489faed861c752ae8d6a3
   - type: file
     url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x32.png
-    sha256: 328e552eeb014d31bb6337add6fcc5c24f83e19c49066f578af701d646fcf2ba
+    sha256: df65d5bdf16a181dcaeda7eca6ac8299005d9c20463e1c6aff432bc7d71452c4
   - type: file
     url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x48.png
-    sha256: 328e552eeb014d31bb6337add6fcc5c24f83e19c49066f578af701d646fcf2ba
+    sha256: 79cf8a08ba620f0b956d017e5a72cfbccfea6a7b5f5ff78e91439ff5f0c252ef
   - type: file
     url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x64.png
-    sha256: 328e552eeb014d31bb6337add6fcc5c24f83e19c49066f578af701d646fcf2ba
+    sha256: 06df4fba4d886ba0da3f043268ead2b409e22e37d8d7da43b3954dac56e2ad19
   - type: file
     url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x128.png
-    sha256: 328e552eeb014d31bb6337add6fcc5c24f83e19c49066f578af701d646fcf2ba
+    sha256: e9c0ea376ce245f1d9c6bdbbb66ecf93fad985c0c25d42333b9741e770c23202
   - type: file
     url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x256.png
-    sha256: 328e552eeb014d31bb6337add6fcc5c24f83e19c49066f578af701d646fcf2ba
+    sha256: 6bcfd50f86fa35f3752487e8c41d4fb29cf80b3f47692efcba3361c604d405fa
   - type: file
     url: https://raw.githubusercontent.com/redeclipse/base/master/src/install/nix/redeclipse_x512.png
     sha256: 328e552eeb014d31bb6337add6fcc5c24f83e19c49066f578af701d646fcf2ba
