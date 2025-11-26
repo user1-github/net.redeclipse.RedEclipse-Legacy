@@ -13,7 +13,8 @@ finish-args:
   - --persist=.redeclipse
 modules:
   - shared-modules/SDL2/SDL2_image.json
-  - other-modules.yml
+  - icon-install.yml
+  - enet.yml
 
   - name: redeclipse
     buildsystem: cmake-ninja
