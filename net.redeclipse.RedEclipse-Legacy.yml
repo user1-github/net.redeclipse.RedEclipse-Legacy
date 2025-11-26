@@ -36,6 +36,6 @@ modules:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
       - cp -a ../config ../data /app/share/redeclipse
-      - install -Dm644 ../net.redeclipse.RedEclipse-Legacy.metainfo.xml /app/share/metainfo/net.redeclipse.RedEclipse-Legacy.metainfo.xml
+      - install -Dm644 ../net.redeclipse.RedEclipse-Legacy.metainfo.xml -t /app/share/metainfo
       - install -Dm644 ../redeclipse.desktop.am /app/share/applications/net.redeclipse.RedEclipse-Legacy.desktop
       - desktop-file-edit --set-name="Red Eclipse Legacy" --set-icon=net.redeclipse.RedEclipse-Legacy --set-key=Exec --set-value=redeclipse /app/share/applications/net.redeclipse.RedEclipse-Legacy.desktop
