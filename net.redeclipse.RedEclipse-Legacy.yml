@@ -17,6 +17,7 @@ modules:
 
   - name: redeclipse
     buildsystem: cmake-ninja
+    builddir: true
     build-options:
       cxxflags: ''
       cxxflags-override: true
