@@ -16,8 +16,11 @@ modules:
   - other-modules.yml
 
   - name: redeclipse
-    no-autogen: true
+    buildsystem: cmake-ninja
     no-make-install: true
+    build-options:
+      cxxflags: ''
+      cxxflags-override: true
     subdir: src
     sources:
       - type: archive
@@ -29,9 +32,9 @@ modules:
       - type: file
         path: net.redeclipse.RedEclipse-Legacy.metainfo.xml
       - type: file
-        path: redeclipse.sh
+        path: files/redeclipse.sh
       - type: patch
-        path: makefile.patch
+        path: files/cmakelists.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
