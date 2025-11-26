@@ -13,7 +13,7 @@ finish-args:
   - --persist=.redeclipse
 modules:
   - shared-modules/SDL2/SDL2_image.json
-  - icon-install.yml
+  - other-modules.yml
 
   - name: redeclipse
     no-autogen: true
