@@ -33,11 +33,11 @@ modules:
       - type: file
         path: net.redeclipse.RedEclipse-Legacy.metainfo.xml
       - type: file
-        path: files/redeclipse.sh
+        path: redeclipse.sh
       - type: patch
-        path: files/cmakelists.patch
+        path: cmakelists.patch
     post-install:
-      - install -Dm755 files/redeclipse.sh /app/bin/redeclipse
+      - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
       - cp -a ../config ../data /app/share/redeclipse
       - install -Dm644 ../net.redeclipse.RedEclipse-Legacy.metainfo.xml -t /app/share/metainfo
