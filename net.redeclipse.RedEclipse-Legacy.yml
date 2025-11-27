@@ -14,18 +14,14 @@ finish-args:
 modules:
   - shared-modules/SDL2/SDL2_image.json
   - icon-install.yml
+  - enet.yml
 
   - name: redeclipse
-    no-autogen: true
+    buildsystem: cmake-ninja
     no-make-install: true
     build-options:
-      cflags: -O3 -fomit-frame-pointer
-      cflags-override: true
-      cxxflags: -O3 -fomit-frame-pointer -ffast-math
+      cxxflags: ''
       cxxflags-override: true
-      env:
-        C_INCLUDE_PATH: /app/include/SDL2
-        CPLUS_INCLUDE_PATH: /app/include/SDL2
     subdir: src
     sources:
       - type: archive
@@ -39,11 +35,11 @@ modules:
       - type: file
         path: redeclipse.sh
       - type: patch
-        path: use-system-sqlite.patch
+        path: cmakelists.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
       - cp -a ../config ../data /app/share/redeclipse
-      - install -Dm644 ../net.redeclipse.RedEclipse-Legacy.metainfo.xml /app/share/metainfo/net.redeclipse.RedEclipse-Legacy.metainfo.xml
+      - install -Dm644 ../net.redeclipse.RedEclipse-Legacy.metainfo.xml -t /app/share/metainfo
       - install -Dm644 ../redeclipse.desktop.am /app/share/applications/net.redeclipse.RedEclipse-Legacy.desktop
       - desktop-file-edit --set-name="Red Eclipse Legacy" --set-icon=net.redeclipse.RedEclipse-Legacy --set-key=Exec --set-value=redeclipse /app/share/applications/net.redeclipse.RedEclipse-Legacy.desktop
