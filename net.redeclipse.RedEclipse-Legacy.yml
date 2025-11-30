@@ -13,8 +13,8 @@ finish-args:
   - --persist=.redeclipse
 modules:
   - shared-modules/SDL2/SDL2_image.json
-  - icon-install.yml
-  - enet.yml
+  - modules/enet.yml
+  - modules/icons.yml
 
   - name: redeclipse
     buildsystem: cmake-ninja
@@ -35,7 +35,9 @@ modules:
       - type: file
         path: redeclipse.sh
       - type: patch
-        path: cmakelists.patch
+        paths:
+          - cmakelists.patch
+          - remove-gamma-name-hack.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
