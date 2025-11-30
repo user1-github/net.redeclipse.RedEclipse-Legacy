@@ -36,8 +36,8 @@ modules:
         path: redeclipse.sh
       - type: patch
         paths:
-          - cmakelists.patch
-          - remove-gamma-name-hack.patch
+          - patches/cmakelists.patch
+          - patches/remove-gamma-name-hack.patch
     post-install:
       - install -Dm755 ../redeclipse.sh /app/bin/redeclipse
       - install -Dm755 redeclipse_linux /app/share/redeclipse/redeclipse
