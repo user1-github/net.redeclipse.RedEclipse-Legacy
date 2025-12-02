@@ -1,4 +1,4 @@
-name: icon-install
+name: icons
 buildsystem: simple
 build-commands:
   - |
