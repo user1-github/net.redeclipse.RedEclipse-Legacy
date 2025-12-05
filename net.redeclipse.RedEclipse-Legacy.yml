@@ -2,7 +2,7 @@ id: net.redeclipse.RedEclipse-Legacy
 runtime: org.freedesktop.Platform
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
-command: redeclipse
+command: blue-nebula_linux
 finish-args:
   - --device=dri
   - --share=ipc
@@ -10,19 +10,14 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --socket=pulseaudio
-  - --persist=.redeclipse
+  - --persist=.blue-nebula
 modules:
   - shared-modules/SDL2/SDL2_image.json
-  - modules/enet.yml
-  - modules/icons.yml
 
-  - name: redeclipse
+  - name: blue-nebula
     buildsystem: cmake-ninja
-    no-make-install: true
-    build-options:
-      cxxflags: ''
-      cxxflags-override: true
-    subdir: src
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
         url: https://github.com/redeclipse/base/releases/download/v1.6.0/redeclipse_1.6.0_nix.tar.bz2
