@@ -20,9 +20,8 @@ modules:
   - name: blue-nebula
     buildsystem: cmake-ninja
     config-opts:
-      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: git
         url: https://github.com/user1-github/base_.git
-        commit: 6a57cc3b40445c880ad3a6c557ea762f61d73b17
+        commit: 8d1bcd3cf7f9470cfc5efd774552a3339709cda7
