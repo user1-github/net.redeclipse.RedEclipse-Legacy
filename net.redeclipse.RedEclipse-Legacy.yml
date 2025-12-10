@@ -23,5 +23,5 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: git
-        url: https://github.com/user1-github/base_.git
-        commit: 8d1bcd3cf7f9470cfc5efd774552a3339709cda7
+        url: https://github.com/blue-nebula/base.git
+        commit: cc664b32ba3b15b20b000a4302f40335ea08e0bb
